@@ -1,0 +1,3 @@
+[submodule "/home/dantes/college/Cervantes/third_party/glfw"]
+	path = /home/dantes/college/Cervantes/third_party/glfw
+	url = https://github.com/glfw/glfw.git

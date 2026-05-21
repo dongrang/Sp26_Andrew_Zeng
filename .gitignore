@@ -1,0 +1,17 @@
+build/
+
+CMakeCache.txt
+compile_commands.json
+
+.vscode
+.cache
+
+.clangd
+
+*.o
+*.a
+*.out
+*.so
+*.exe
+
+.DS_Store
