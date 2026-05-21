@@ -23,12 +23,13 @@ std::unique_ptr<Renderer>& Renderer::get()
     return m_instance;
 }
 
+
+
 void Renderer::draw(Picture& pic, int xCoord, int yCoord)
 {
-    auto windowSize = Window::get()->getSize();
-    int window_width  = static_cast<int>(windowSize.width);
-    int window_height = static_cast<int>(windowSize.height);
-    mDefaultShader.supplyIntUniform("screenRes", {window_width,window_height});
+    int width = static_cast<int>(Window::get()->getSize().width);
+    int height = static_cast<int>(Window::get()->getSize().height);
+    mDefaultShader.supplyIntUniform("screenRes", {width,height});
     m_renderer->draw(pic, xCoord, yCoord, mDefaultShader);
 }
 
@@ -49,6 +50,33 @@ void Renderer::draw(Unit& unit, Shader& shader)
 {
     m_renderer->draw(unit.mPicture,unit.mXpos,unit.mYpos,shader);
 }  
+
+void Renderer::draw(Background& background)
+{
+    int width = static_cast<int>(Window::get()->getSize().width);
+    int height = static_cast<int>(Window::get()->getSize().height);
+    mDefaultShader.supplyIntUniform("screenRes", {width,height});
+    m_renderer->draw(background.picture_,0,0,mDefaultShader);
+}
+
+void Renderer::draw(Background& background, Shader& shader)
+{
+    m_renderer->draw(background.picture_,0,0,shader);
+}
+
+void Renderer::draw(Ui& ui)
+{
+    int width = static_cast<int>(Window::get()->getSize().width);
+    int height = static_cast<int>(Window::get()->getSize().height);
+    mDefaultShader.supplyIntUniform("screenRes", {width,height});
+    m_renderer->draw(ui.picture_,ui.xCoord_,ui.yCoord_,mDefaultShader);
+}
+
+void Renderer::draw(Ui& ui, Shader& shader)
+{
+    m_renderer->draw(ui.picture_,ui.xCoord_,ui.yCoord_,shader);
+} 
+
 void Renderer::screenClear()
 {
     m_renderer->screenClear();

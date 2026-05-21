@@ -2,10 +2,6 @@
 #include "OpenGLWindow.hpp"
 namespace Cervantes {
 
-//
-// PRIVATE
-//
-
 /**
     Constructor for window,
     add implementation for choosing different graphics api here
@@ -16,10 +12,6 @@ Window::Window()
     m_window = std::make_unique<OpenGLWindow>();
 }
 
-//
-// PUBLIC
-//
-
 void Window::init()
 {
     // nb: make_unique is more memory safe than unique_ptr 
@@ -28,7 +20,6 @@ void Window::init()
     {
         m_instance = std::unique_ptr<Window>{new Window};
     }
-
 
 }
 

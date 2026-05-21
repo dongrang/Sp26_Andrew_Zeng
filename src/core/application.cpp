@@ -1,6 +1,7 @@
 #include "Cervantes/core/application.hpp"
 #include "Cervantes/core/Unit.hpp"
 #include "Cervantes/core/Renderer.hpp"
+#include "Cervantes/core/Screen.hpp"
 
 #include "window.hpp"
 #include <stb_image.h>

@@ -14,6 +14,7 @@ set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 add_subdirectory(third_party/glfw)
 
+
 add_library(glad STATIC third_party/glad/src/gl.c)
 target_include_directories(glad PUBLIC third_party/glad/include)
 
@@ -31,16 +32,14 @@ add_library(CervantesLib
     src/core/OpenGLWindow.cpp
     src/core/OpenGLRenderer.cpp
     src/core/Renderer.cpp
-    src/core/Unit.cpp)
+    src/core/Unit.cpp
+    src/core/Screen.cpp
+    )
 target_include_directories(CervantesLib PUBLIC includes)
 
-add_executable(Cervantes 
-    src/main.cpp
-    )
-
 target_precompile_headers(CervantesLib PUBLIC src/pch.hpp)
-target_precompile_headers(Cervantes REUSE_FROM CervantesLib)
 
 target_link_libraries(CervantesLib PRIVATE OpenGL::GL glfw glad stb_image)
-target_link_libraries(Cervantes PUBLIC CervantesLib)
 
+file(COPY assets DESTINATION ${CMAKE_BINARY_DIR}/game)
+add_subdirectory(game)

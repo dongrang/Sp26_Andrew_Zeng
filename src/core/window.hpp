@@ -21,9 +21,7 @@ class Window
         void setWindowCloseCallback(std::function<void(const WindowCloseEvent&)> newCallback);
         void setKeyCallback(std::function<void(const KeyEvent&)> newCallback);
 
-
     private:
-
         Window();
         inline static std::unique_ptr<Window> m_instance{nullptr};
         std::unique_ptr<IWindow> m_window{nullptr};

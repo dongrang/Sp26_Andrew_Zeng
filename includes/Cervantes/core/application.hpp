@@ -2,6 +2,7 @@
 #define APPLICATION_HPP
 
 #include "Events.hpp"
+#include "Screen.hpp"
 
 constexpr int FRAMES_PER_SECOND{ 144 };
 
@@ -22,6 +23,7 @@ class Application {
 
         void setWindowCloseCallback(std::function<void(const WindowCloseEvent&)>);
         void setKeyCallback(std::function<void(const KeyEvent&)>);
+
         virtual ~Application() = default;
 
     private: 

@@ -19,10 +19,12 @@ class OpenGLWindow : public IWindow {
         void setWindowCloseCallback(std::function<void(const WindowCloseEvent&)> newCallback) override;
         void setKeyCallback(std::function<void(const KeyEvent&)> newCallback) override;
 
+        
     private:
         GLFWwindow* m_windowPtr{nullptr};
         static void framebufferSizeCallback(GLFWwindow* window,int width, int height);
         
+
         struct Callbacks {
             std::function<void(const WindowCloseEvent&)> WindowCloseCallback;        
             std::function<void(const KeyEvent&)> KeyCallback;         
