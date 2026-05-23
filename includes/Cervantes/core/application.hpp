@@ -2,15 +2,13 @@
 #define APPLICATION_HPP
 
 #include "Events.hpp"
-#include "Screen.hpp"
 
 constexpr int FRAMES_PER_SECOND{ 144 };
-
 
 namespace Cervantes {
 
 class Application {
-    
+
     public: 
 
         Application();
@@ -26,12 +24,19 @@ class Application {
 
         virtual ~Application() = default;
 
+    protected:
+
+        bool keys_array_[1024] = {false};
+        
     private: 
+
         std::chrono::milliseconds m_frameduration{ 1000 / FRAMES_PER_SECOND };
         std::chrono::steady_clock::time_point m_nextframetime;
 
         bool mShouldContinue{ true };
         void defaultWindowCloseCallback(const WindowCloseEvent&);
+
+        
     };
 
 } // end namespace Cervantes

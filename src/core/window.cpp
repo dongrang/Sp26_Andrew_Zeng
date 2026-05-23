@@ -1,4 +1,5 @@
-#include "window.hpp"
+#include "Cervantes/core/window.hpp"
+
 #include "OpenGLWindow.hpp"
 namespace Cervantes {
 

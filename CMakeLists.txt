@@ -21,6 +21,9 @@ target_include_directories(glad PUBLIC third_party/glad/include)
 add_library(stb_image STATIC third_party/stb_image/stb_image.c)
 target_include_directories(stb_image PUBLIC third_party/stb_image)
 
+add_library(types INTERFACE)
+target_include_directories(types INTERFACE includes/)
+
 add_library(CervantesLib     
     src/core/application.cpp
     src/core/Picture.cpp    
@@ -33,13 +36,12 @@ add_library(CervantesLib
     src/core/OpenGLRenderer.cpp
     src/core/Renderer.cpp
     src/core/Unit.cpp
-    src/core/Screen.cpp
     )
 target_include_directories(CervantesLib PUBLIC includes)
 
 target_precompile_headers(CervantesLib PUBLIC src/pch.hpp)
 
-target_link_libraries(CervantesLib PRIVATE OpenGL::GL glfw glad stb_image)
+target_link_libraries(CervantesLib PRIVATE OpenGL::GL glfw glad stb_image types)
 
 file(COPY assets DESTINATION ${CMAKE_BINARY_DIR}/game)
 add_subdirectory(game)

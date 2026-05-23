@@ -15,5 +15,6 @@
 #include <utility>
 #include <unordered_map>
 #include <functional>
+#include <algorithm>
 
 #endif

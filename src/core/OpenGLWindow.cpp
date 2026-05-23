@@ -32,6 +32,8 @@ void OpenGLWindow::create(const Dimensions& dimensions, const std::string& title
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_FLOATING, GLFW_TRUE);    
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+
+    // GLFW_FLOATING does not work on wayland display server
     glfwWindowHintString(GLFW_WAYLAND_APP_ID, "CustomAppClass");
 
     m_windowPtr = glfwCreateWindow(static_cast<int>(dimensions.width), static_cast<int>(dimensions.height), title.c_str(), nullptr, nullptr);

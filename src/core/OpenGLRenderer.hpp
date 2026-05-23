@@ -7,7 +7,6 @@ namespace Cervantes {
 
 class OpenGLRenderer : public IRenderer{
     public:
-
         OpenGLRenderer();
         void draw(Picture& pic, int xCoord,int yCoord,Shader& shader) override;
         void screenClear() override;

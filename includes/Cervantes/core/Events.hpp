@@ -12,7 +12,7 @@ class WindowCloseEvent
 class KeyEvent
 {
     public:
-        enum class KeyAction{ UNDEFINED, PRESS, REPEAT, RELEASE};
+        enum class KeyAction{ UNDEFINED, PRESS, REPEAT, RELEASE };
         KeyEvent(Key keyCode, KeyAction action);        
         Key getKeyCode() const;
         KeyAction getAction() const;

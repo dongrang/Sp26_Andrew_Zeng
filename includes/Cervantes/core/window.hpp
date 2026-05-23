@@ -1,7 +1,7 @@
 #ifndef WINDOW_HPP
 #define WINDOW_HPP
 
-#include "IWindow.hpp"
+#include "../../../src/core/IWindow.hpp"
 
 namespace Cervantes {
 

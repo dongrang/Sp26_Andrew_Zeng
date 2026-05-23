@@ -8,5 +8,6 @@
 #include "Events.hpp"
 #include "KeyCodes.hpp"
 #include "Renderer.hpp"
+#include "window.hpp"
 
 #endif

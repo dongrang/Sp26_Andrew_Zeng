@@ -1,9 +1,8 @@
 #include "Cervantes/core/application.hpp"
 #include "Cervantes/core/Unit.hpp"
 #include "Cervantes/core/Renderer.hpp"
-#include "Cervantes/core/Screen.hpp"
+#include "Cervantes/core/window.hpp"
 
-#include "window.hpp"
 #include <stb_image.h>
 #include <glad/gl.h>
 
@@ -12,7 +11,7 @@ namespace Cervantes {
     Application::Application()
     {
         Window::init();
-        Window::get()->create({1000,1000}, "Current Window.");
+        Window::get()->create({720 , 780}, "Current Window.");
 
         /*
             passes lambda function to the game engine
@@ -23,20 +22,12 @@ namespace Cervantes {
         Renderer::init();
     }
 
-    void Application::update()
-    {
+    void Application::update() {}
 
-    }
+    void Application::init() {}
 
-    void Application::init()
-    {
+    void Application::shutdown() {}
 
-    }
-
-    void Application::shutdown()
-    {
-
-    }
     void Application::run()
     {
         init();

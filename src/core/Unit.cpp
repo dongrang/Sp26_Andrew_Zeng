@@ -4,12 +4,10 @@ namespace Cervantes {
 
 Unit::Unit(const std::string& fileName)
 {
-
 }
 
 Unit::Unit(const std::string& fileName, int xPos, int yPos):mPicture(fileName),mXpos(xPos),mYpos(yPos)
 {
-
 }
 void Unit::setCoordinates(int newxPos, int newyPos)
 {
@@ -32,6 +30,11 @@ void Unit::incrementXPosition(int amt)
 void Unit::incrementYPosition(int amt)
 {
     mYpos += amt;
+}
+
+Dimensions Unit::getDimensions() const
+{
+    return mPicture.getDimensions();
 }
 
 void Unit::setSpeed(int newSpeed)

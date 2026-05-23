@@ -1,6 +1,7 @@
+#include "Cervantes/core//window.hpp"
 #include "OpenGLRenderer.hpp"
 #include <glad/gl.h>
-#include "window.hpp"
+
 namespace Cervantes {
 
 OpenGLRenderer::OpenGLRenderer()
