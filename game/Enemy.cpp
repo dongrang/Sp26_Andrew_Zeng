@@ -87,7 +87,7 @@ HealthBar& Enemy::Bar()
 
 void Enemy::fire()
 {
-    /*proj_.emplace_back("../../assets/textures/units/red.png", 
+    /*proj_.emplace_back("assets/textures/units/red.png", 
                     getXCoordinate()+getDimensions().width/2,getYCoordinate(),-5);
     */
     updatePhase();
@@ -97,23 +97,23 @@ void Enemy::fire()
     switch (phase_) {
 
         case Phase::ONE:
-            proj_.emplace_back("../../assets/textures/units/red.png", 
+            proj_.emplace_back("assets/textures/units/red.png", 
                     middle, getYCoordinate(),-5);
             break;
 
         case Phase::TWO:
-            proj_.emplace_back("../../assets/textures/units/red.png",
+            proj_.emplace_back("assets/textures/units/red.png",
                 middle - spacing, getYCoordinate(), -4);
-            proj_.emplace_back("../../assets/textures/units/red.png",
+            proj_.emplace_back("assets/textures/units/red.png",
                 middle + spacing, getYCoordinate(), -4);            
             break;
 
         case Phase::THREE:
-            proj_.emplace_back("../../assets/textures/units/red.png",
+            proj_.emplace_back("assets/textures/units/red.png",
                 middle - spacing, getYCoordinate(), -3);
-            proj_.emplace_back("../../assets/textures/units/red.png",
+            proj_.emplace_back("assets/textures/units/red.png",
                 middle,           getYCoordinate(), -4);
-            proj_.emplace_back("../../assets/textures/units/red.png",
+            proj_.emplace_back("assets/textures/units/red.png",
                 middle + spacing, getYCoordinate(), -3);
             break;
     }

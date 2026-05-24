@@ -7,4 +7,4 @@ add_executable(Game Game.cpp
 
 target_link_libraries(Game PUBLIC CervantesLib)
 
-file(COPY assets DESTINATION ${CMAKE_BINARY_DIR}/assets)
+file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR})

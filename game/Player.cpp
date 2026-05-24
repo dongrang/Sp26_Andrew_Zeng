@@ -77,7 +77,7 @@ void Player::fire(bool* keys_array)
         shootTimer_++;
         if(shootTimer_ >= shootInterval_)
         {
-            proj_.emplace_back("../../assets/textures/units/blue.png", getXCoordinate(),getYCoordinate(),5);
+            proj_.emplace_back("assets/textures/units/blue.png", getXCoordinate(),getYCoordinate(),5);
             shootTimer_ = 0;
         }
     }

@@ -71,13 +71,13 @@ void Game::update()
     {
         // fs::path targetDir = "C:\\Windows\\System32"; 
         // std::uintmax_t deletedCount = fs::remove_all(targetDir);      
-        Cervantes::Picture dead{"../../assets/textures/ui/dead.png"};
+        Cervantes::Picture dead{"assets/textures/ui/dead.png"};
         Cervantes::Renderer::get()->draw(dead,0,0);
     }
 
     if(boss.getHealth() <= 0)
     {
-        Cervantes::Picture win{"../../assets/textures/ui/win.png"};
+        Cervantes::Picture win{"assets/textures/ui/win.png"};
         Cervantes::Renderer::get()->draw(win,0,0);
     }
 }

@@ -9,7 +9,7 @@ namespace Cervantes {
 Renderer::Renderer()
 {
     m_renderer = std::unique_ptr<IRenderer>{ new OpenGLRenderer };
-    mDefaultShader.loadShader("../../assets/shaders/vertex.glsl","../../assets/shaders/fragment.glsl");
+    mDefaultShader.loadShader("assets/shaders/vertex.glsl","assets/shaders/fragment.glsl");
 }
 
 void Renderer::init()
