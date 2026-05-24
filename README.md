@@ -19,5 +19,5 @@ cmake --build build --target Game
 Run:
 
 ```bash
-./build/Game
+./Game
 ```

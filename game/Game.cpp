@@ -12,8 +12,8 @@ void Game::init()
             keys_array_[static_cast<int>(event.getKeyCode())] = false;
     });  
 
-    player.spawn(50,4);
-    boss.spawn(400,6);
+    player.spawn(100,4);
+    boss.spawn(800,6);
 
 }
 
