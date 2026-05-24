@@ -4,7 +4,7 @@ project(Cervantes VERSION 0.1 LANGUAGES C CXX)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
 
 find_package(OpenGL REQUIRED)
 
@@ -43,5 +43,4 @@ target_precompile_headers(CervantesLib PUBLIC src/pch.hpp)
 
 target_link_libraries(CervantesLib PRIVATE OpenGL::GL glfw glad stb_image types)
 
-file(COPY assets DESTINATION ${CMAKE_BINARY_DIR}/game)
 add_subdirectory(game)
