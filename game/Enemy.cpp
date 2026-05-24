@@ -98,23 +98,23 @@ void Enemy::fire()
 
         case Phase::ONE:
             proj_.emplace_back("assets/textures/units/red.png", 
-                    middle, getYCoordinate(),-5);
+                    middle, getYCoordinate(),0,-10);
             break;
 
         case Phase::TWO:
             proj_.emplace_back("assets/textures/units/red.png",
-                middle - spacing, getYCoordinate(), -4);
+                middle - spacing, getYCoordinate(), 0,-8);
             proj_.emplace_back("assets/textures/units/red.png",
-                middle + spacing, getYCoordinate(), -4);            
+                middle + spacing, getYCoordinate(), 0,-8);            
             break;
 
         case Phase::THREE:
             proj_.emplace_back("assets/textures/units/red.png",
-                middle - spacing, getYCoordinate(), -3);
+                middle - spacing, getYCoordinate(), -3,-6);
             proj_.emplace_back("assets/textures/units/red.png",
-                middle,           getYCoordinate(), -4);
+                middle,           getYCoordinate(), 0,-8);
             proj_.emplace_back("assets/textures/units/red.png",
-                middle + spacing, getYCoordinate(), -3);
+                middle + spacing, getYCoordinate(), 3,-6);
             break;
     }
 }

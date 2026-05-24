@@ -12,8 +12,8 @@ void Game::init()
             keys_array_[static_cast<int>(event.getKeyCode())] = false;
     });  
 
-    player.spawn(50,2);
-    boss.spawn(666,5);
+    player.spawn(50,4);
+    boss.spawn(400,6);
 
 }
 
@@ -52,7 +52,7 @@ void Game::update()
         if(p.isActive() && Cervantes::Collide(p, boss))
         {
             p.deactivate();
-            boss.takeDamage(10);
+            boss.takeDamage(20);
         }
     }
 

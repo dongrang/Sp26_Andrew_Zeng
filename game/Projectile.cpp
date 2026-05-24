@@ -1,17 +1,17 @@
 #include "Projectile.hpp"
 #include "Cervantes/core/window.hpp"
 
-Projectile::Projectile(const std::string& fileName,int x,int y,int speed):Unit(fileName,x,y),speed_(speed)
+Projectile::Projectile(const std::string& fileName,int x,int y,int xspeed,int yspeed):Unit(fileName,x,y),xSpeed_(xspeed),ySpeed_(yspeed)
 {}
 
 void Projectile::update()
 {
-    incrementYPosition(speed_);
+    incrementXPosition(xSpeed_);
+    incrementYPosition(ySpeed_);
 
     if(getYCoordinate() > (int)Cervantes::Window::get()->getSize().height || getYCoordinate() < 0)
-    {
         deactivate();
-    }
+    
 }
 
 bool Projectile::isActive() const

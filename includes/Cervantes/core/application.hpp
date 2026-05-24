@@ -3,7 +3,7 @@
 
 #include "Events.hpp"
 
-constexpr int FRAMES_PER_SECOND{ 144 };
+constexpr int FRAMES_PER_SECOND{ 60 };
 
 namespace Cervantes {
 
