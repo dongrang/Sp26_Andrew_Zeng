@@ -73,6 +73,7 @@ namespace Cervantes {
         if(image_data)
         {
             glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format,GL_UNSIGNED_BYTE,image_data);
+            m_dimensions = { static_cast<std::uint32_t>(width), static_cast<std::uint32_t>(height) };
             // remember, mipmap are the smaller copies of our image
             glGenerateMipmap(GL_TEXTURE_2D);
         }

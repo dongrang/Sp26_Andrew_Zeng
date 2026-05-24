@@ -59,6 +59,15 @@ bool Unit::isVisible() const
     return mIsVisible;
 }
 
+void Unit::clampCoords(int left, int right, int bottom, int top)
+{
+    int clampedRight = right - (int)getDimensions().width;
+    int clampedTop   = top   - (int)getDimensions().height;
+    setCoordinates(
+        std::clamp(getXCoordinate(), left,   clampedRight),
+        std::clamp(getYCoordinate(), bottom, clampedTop)
+    );
+}
 bool Collide(const Unit& one, const Unit& another)
 {
     int LeftOne       = one.mXpos;
@@ -75,5 +84,7 @@ bool Collide(const Unit& one, const Unit& another)
     bool yOverlap = (TopOne > BottomAnother) && (BottomOne < TopAnother);
     return (yOverlap && xOverlap);
 }   
+
+
 
 } // end naemspace Cervantes

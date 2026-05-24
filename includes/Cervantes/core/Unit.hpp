@@ -28,7 +28,9 @@ namespace Cervantes {
         void makeInvisible();
         void makeVisible();
         bool isVisible() const;
-        
+
+        void clampCoords(int left, int right,int top, int bottom);
+
     private:
 
         Picture mPicture;
@@ -40,6 +42,7 @@ namespace Cervantes {
 
         friend class Renderer;
         friend bool Collide(const Unit& one, const Unit& another);        
+        
 };
 bool Collide(const Unit& one, const Unit& another);
 

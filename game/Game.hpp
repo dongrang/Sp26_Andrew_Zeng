@@ -8,6 +8,7 @@ class Game : public Cervantes::Application{
 
         void init() override;
         void update() override;
+        void shutdown() override;
         
     private:
 
@@ -16,7 +17,7 @@ class Game : public Cervantes::Application{
         Cervantes::Picture boss_health{"../../assets/textures/ui/Boss_Healthbar.png"};
         // For now, drawing of units requires default vals for position in constructor until renderer
         // part of game engine is expanded
-        Player player{"../../assets/textures/units/saori_plushie.png",0,0};
-        Enemy boss{"../../assets/textures/units/donquixote.png",0,0};
-
+        Player player{"../../assets/textures/units/saori_plushie.png",0,0,100};
+        Enemy boss{"../../assets/textures/units/donquixote.png",0,0,100};
+    
 };
