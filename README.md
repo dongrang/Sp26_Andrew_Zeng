@@ -7,13 +7,11 @@ The boss, the only enemy at the moment, has 3 phases. In the first phase it shoo
 
 Linux:
 
-'''bash
+```bash
 git clone --recursive https://github.com/dongrang/Cervantes.git
 cd Cervantes
 cmake -S . -B build
 cmake --build build --target Game
 ./build/Game
-'''
-
-
+```
 
