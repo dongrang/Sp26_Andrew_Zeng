@@ -9,6 +9,7 @@ Clone and build:
 
 ```bash
 git clone --recursive https://github.com/dongrang/Cervantes.git
+git submodule update --init --recursive 
 cd Cervantes
 cmake -S . -B build
 cmake --build build --target Game
