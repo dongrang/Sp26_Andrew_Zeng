@@ -10,10 +10,6 @@ compile_commands.json
 
 *.o
 *.a
-*.out
 *.so
-*.exe
-
-.DS_Store
 
 Game
